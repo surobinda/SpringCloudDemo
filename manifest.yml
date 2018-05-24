@@ -1,0 +1,11 @@
+applications:
+- name: springclouddemo
+  path: ./target/SpringCloudDemo-0.0.1-SNAPSHOT.jar
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: springclouddemo.cfapps.io
+  services:
+  - springcloudedemo-db
+  stack: cflinuxfs2
